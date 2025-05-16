@@ -1,85 +1,116 @@
-# Bash Cheat sheet ( Infobash ) 🚀 ( Autor Alejandro Moncada)
+## 📄 Archivo `README.md` – Versión Final Recomendada
 
-## Aun en Proceso
+```markdown
+# 🐚 Bash Cheat Sheet Interactivo – `infobash`
 
-![Bash](https://img.shields.io/badge/GNU-Bash-4EAA25?logo=gnu-bash&logoColor=white)
+> ¡Una guía rápida y amigable para aprender comandos de Linux directamente desde la terminal!
 
-Esta es una hoja de referencias interactivas de comandos Bash con interfaz amigable y funcionalidades avanzadas parecida a man, lo he realizado para practicar mis habilidades en bash y guardar los comandos que fui aprendiendo sobre la marcha.
+![Banner](.banner.ascii)
 
-## ✨ Características principales
+Este es un pequeño proyecto hecho en **Bash Scripting** que te permite consultar fácilmente información sobre los comandos más usados en Linux, sin salir de la terminal. Ideal tanto para principiantes como para usuarios intermedios que quieren tener una referencia rápida.
 
-- 🔍 Busqueda interactiva de comandos Bash
-- 📖 Visualización formateada de documentación (usando `glow`)
-- 🎨 Interfaz intuitiva con menú de opciones
-- 📂 Organización por categorías de comandos
 
-## 🛠 Instalación
+## 🧩 Características Principales
 
-1. Clona el repositorio:
+- ✅ Menú interactivo con navegación intuitiva.
+- 🔍 Búsqueda rápida de comandos (ej: `infobash awk`).
+- 📄 Visualización bonita del contenido usando `glow`.
+- 🛠️ Fácil instalación y desinstalación.
+- 🗂️ Estructura modular: agrega nuevos comandos fácilmente creando archivos `.md`.
+
+---
+---
+## ⚙️ Instalación
+
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/AlejandroXYZ/bash-cheat-sheet.git
+   cd bash-cheat-sheet
+   ```
+
+2. Ejecuta el instalador como **superusuario**:
+   ```bash
+   sudo ./install.sh
+   ```
+
+> ✅ El instalador detectará si estás en un sistema basado en **Arch** o **Debian**, e instalará las dependencias necesarias.
+---
+
+## 💻 Uso
+
+### Modo Interactivo
 ```bash
-git clone https://github.com/tu-usuario/bash-cheatsheet-interactive.git
-Navega al directorio:
-
-cd Bash_Cheatsheet_Interactive
-
-Dale permisos de ejecución:
-
-chmod u+x install.sh
-
-🚀 Uso
-Modo interactivo (menú principal):
-
-Utiliza el comando:
-
 infobash
+```
+Te mostrará un menú donde puedes buscar comandos y navegar por ellos.
 
-Tambien puedes utilizar solo el nombre del comando que deseas utilizar, por ejemplo:
 
+### Uso Directo
+```bash
+infobash ls
 infobash grep
+infobash chmod
+```
 
-infobash awk
+Muestra la información del comando especificado.
 
+### Ver Ayuda
+```bash
+infobash -h
+infobash --help
+```
 
-
-
-� Estructura de archivos
-.
-├── commands/          # Directorio con documentación de comandos
-│   ├── grep.md        # Documentación para grep
-│   ├── sed.md         # Documentación para sed
-│   └── ...            # Más comandos
-└── Bash_Cheatsheet_Interactive.sh  # Script principal
-
-
-📝 Menu Principal
-
-Buscar comandos: Búsqueda interactiva en la documentación
-
-(Próximamente): Más funcionalidades!
-
-Salir: Sale del programa (también con Ctrl+C)
-
-
-🤝 Para desinstalar ejecuta:
-
+### Desinstalar
+```bash
 infobash --desinstall
+```
 
-y selecciona si
+El programa te preguntará si deseas eliminarlo del sistema.
 
-🤝 Contribución
+---
 
-¡Las contribuciones son bienvenidas! Por favor:
+## 📁 Estructura del Proyecto
 
-Haz fork del proyecto
+```
+bash-cheat-sheet/
+├── commands/             # Aquí van los .md con info de cada comando
+│   ├── ls.md
+│   ├── cp.md
+│   └── ...
+├── .banner.ascii         # Banner ASCII mostrado al inicio
+├── help.md               # Panel de ayuda (este archivo)
+├── infobash.sh           # Script principal
+└── install.sh            # Script de instalación
+```
 
-Crea tu rama (git checkout -b feature/nueva-funcionalidad)
-
-Haz commit de tus cambios (git commit -am 'Añade nueva funcionalidad')
-
-Haz push a la rama (git push origin feature/nueva-funcionalidad)
-
-Abre un Pull Request
+---
 
 
-📜 Licencia
-MIT © [Alejandro Moncada ( AlejandroXYZ)]
+## 🧑‍💻 ¿Cómo Contribuir?
+
+¡Se aceptan contribuciones! Puedes:
+
+- Añadir más comandos a la carpeta `commands/`.
+- Mejorar la traducción o estilo de los `.md`.
+- Optimizar el código del script principal.
+- Sugerir nuevas funcionalidades.
+
+Solo haz un fork, crea una rama nueva y abre un Pull Request.
+
+---
+---
+
+## 👤 Autor
+
+**Alejandro Moncada**  
+GitHub: [@AlejandroXYZ](https://github.com/AlejandroXYZ)  
+Correo: alejandromdekuedit@gmail.com
+
+---
+
+## 🙌 Gracias por usar Infobash
+
+Espero que te sea útil. ¡Sigue aprendiendo y explorando el mundo de Linux!
+```
+
+---

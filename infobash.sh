@@ -72,16 +72,15 @@ menu(){
 		fi
 }
 
-menu
-
 # Funciones desde la terminal, parecido a man
 if [[ -f ./commands/$1.md ]];then
 	find . -iname "$1.md" | xargs glow -p
 	cd ..
 	exit 0 
+fi
 	
 # Desinstalacion del programa
-elif [[ $1 == "--desinstall" ]]; then
+if [[ $1 == "--desinstall" ]]; then
 	echo "Estas seguro de que deseas Desinstalar el programa?"
 	read -p "Escribe tu respuesta, si o no:   " respuesta
 	if [[ $respuesta == "si" || $respuesta ==  "s" ]]; then
@@ -98,8 +97,11 @@ elif [[ $1 == "--desinstall" ]]; then
 # Panel de Ayuda
 elif [[ $1 == "-h" || $1 ==  "--help" ]]; then
 	glow -p help.md
+
+elif [[ $# > 0 ]]; then
+	echo -e "\nNo se reconoce el Parametro dado, ejemplos de uso: \n\ninfobash   (Muestra el menu de opciones)\ninfobash -h   o   infobash --help   (Muestra el Panel de Ayuda)\ninfobash --desinstall (Desistalar el programa) "
 else
-	echo "No se encontró ese comando"
+	menu
 	exit 1
 fi
 exit 0

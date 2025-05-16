@@ -2,6 +2,7 @@
 
 # Instalador de herramientas necesarias para poder ejecutar el programa correctamente
 
+trap 'rm -rf "$ruta_de_instalacion"; exit 1' ERR
 
 sistema_operativo=$(grep '^NAME=' /etc/os-release|cut -d '"' -f 2|cut -d " " -f 1)
 ruta_de_instalacion="/opt/bash_cheat_sheet"
@@ -28,13 +29,13 @@ instalador(){
 		echo -e "\nNo se pudieron copiar los archivos\n"
 		exit 1	
 	fi		
-	if chmod u+x $ruta_de_instalacion/Bash_Cheatsheet_Interactive.sh ; then
+	if chmod u+x $ruta_de_instalacion/infobash.sh ; then
 		echo -e "\nSe asignaron los permisos correctamente\n"
 	else
 		echo -e "\nError al asignar los permisos\n"
 		exit 1
 	fi
-	if ln -s $ruta_de_instalacion/Bash_Cheatsheet_Interactive.sh /usr/local/bin/infobash 2>/dev/null ; then
+	if ln -s $ruta_de_instalacion/infobash.sh /usr/local/bin/infobash 2>/dev/null ; then
 		echo -e "\nse creo el enlace simbolico satisfactoriamente\n"
 	else
 		echo -e "\nNo se pudo hacer el enlace simbolico o ya existe\n"
@@ -56,8 +57,7 @@ sleep 5
 
 if [[ $sistema_operativo == "Arch" || $sistema_operativo == "arch" ]];then
 	echo -e "\n\nEstas usando Arch Linux\n\n"
-	which glow > /dev/null
-	if [[ $? -ne 0 ]]; then
+	if ! command -v glow >/dev/null ; then
 		if pacman -Sy --noconfirm glow > /dev/null ; then
 		 echo "Se ha instalado correctamente"
 		 sleep 2 
@@ -69,8 +69,7 @@ if [[ $sistema_operativo == "Arch" || $sistema_operativo == "arch" ]];then
 	instalador
 else 
 	echo -e "\n\nEstas usando un linux base Debian\n\n"
-	which glow > /dev/null
-	if [[ $? -ne 0 ]]; then
+	if ! command -v glow  >/dev/null ; then
 		if apt update >/dev/null ; then
 		  apt install glow -y >/dev/null
 		else
