@@ -4,6 +4,21 @@
 # Autor : Alejandro Moncada
 # Github : AlejandroXYZ 
 
+# ==============================
+# Colores para salida de texto
+# ==============================
+colorReset='\e[0m'
+colorRojo='\e[31m'
+colorVerde='\e[32m'
+colorAmarillo='\e[33m'
+colorAzul='\e[34m'
+colorMagenta='\e[35m'
+colorCyan='\e[36m'
+colorBlanco='\e[37m'
+
+# Estilos adicionales
+negrita='\e[1m'
+subrayado='\e[4m'
 
 #Función para controlar el Ctrl_c
 
@@ -16,7 +31,7 @@ trap ctrl_c INT
 
 #Funcion del Banner
 banner(){
-	cat .banner.ascii	                                                                                       
+		cat .banner.ascii
 }
 
 lista(){

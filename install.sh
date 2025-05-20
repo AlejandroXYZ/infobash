@@ -29,7 +29,7 @@ instalador(){
 		echo -e "\nNo se pudieron copiar los archivos\n"
 		exit 1	
 	fi		
-	if chmod u+x $ruta_de_instalacion/infobash.sh ; then
+	if $(sudo chmod u+x $ruta_de_instalacion/infobash.sh) ; then
 		echo -e "\nSe asignaron los permisos correctamente\n"
 	else
 		echo -e "\nError al asignar los permisos\n"

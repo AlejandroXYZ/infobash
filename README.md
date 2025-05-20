@@ -1,6 +1,5 @@
 ## 📄 Archivo `README.md` – Versión Final Recomendada
 
-```markdown
 # 🐚 Bash Cheat Sheet Interactivo – `infobash`
 
 > ¡Una guía rápida y amigable para aprender comandos de Linux directamente desde la terminal!
@@ -112,5 +111,3 @@ Correo: alejandromdekuedit@gmail.com
 
 Espero que te sea útil. ¡Sigue aprendiendo y explorando el mundo de Linux!
 ```
-
----
