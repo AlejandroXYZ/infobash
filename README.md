@@ -108,3 +108,5 @@ Correo: alejandromdekuedit@gmail.com
 ## 🙌 Gracias por usar Infobash
 
 Espero que te sea útil. ¡Sigue aprendiendo y explorando el mundo de Linux!
+
+#bash #linux #learn #easy #newbie
