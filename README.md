@@ -4,8 +4,6 @@
 
 > ¡Una guía rápida y amigable para aprender comandos de Linux directamente desde la terminal!
 
-![Banner](.banner.ascii)
-
 Este es un pequeño proyecto hecho en **Bash Scripting** que te permite consultar fácilmente información sobre los comandos más usados en Linux, sin salir de la terminal. Ideal tanto para principiantes como para usuarios intermedios que quieren tener una referencia rápida.
 
 
@@ -110,4 +108,3 @@ Correo: alejandromdekuedit@gmail.com
 ## 🙌 Gracias por usar Infobash
 
 Espero que te sea útil. ¡Sigue aprendiendo y explorando el mundo de Linux!
-```
